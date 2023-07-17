@@ -31,7 +31,7 @@ jobs:
 
       - name: Run MegaCalculator
         run: |
-          py .\src\mega_calculator\__main__.py add  2 3 7
+          python .\src\mega_calculator\__main__.py add  2 3 7
 
       - name: Install dependencies
         run: |
