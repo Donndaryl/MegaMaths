@@ -28,11 +28,6 @@ jobs:
       - name: Load Poetry dependencies
         run: |
           poetry install
-
-      - name: Run MegaCalculator
-        run: |
-          python .\src\mega_calculator\__main__.py add  2 3 7
-
       - name: Install dependencies
         run: |
           pip install -r ../../requirements.txt
