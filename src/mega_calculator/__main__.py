@@ -1,5 +1,5 @@
-from mega_calculator.parser import create_parser
-from mega_calculator.operation import do_operation
+from parser import create_parser
+from operation import do_operation
 
 
 if __name__ == "__main__":

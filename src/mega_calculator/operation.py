@@ -1,4 +1,4 @@
-from mega_calculator import math
+import math_
 import functools
 
 # This file contains dirty & useless code just to add content to this codebase
@@ -19,16 +19,16 @@ def do_operation(operation_name: str, values: list[float]) -> float:
 
 
 def do_add(values: list[float]) -> float:
-    return functools.reduce(math.add, values)
+    return functools.reduce(math_.add, values)
 
 
 def do_sub(values: list[float]) -> float:
-    return functools.reduce(math.sub, values)
+    return functools.reduce(math_.sub, values)
 
 
 def do_mul(values: list[float]) -> float:
-    return functools.reduce(math.mul, values)
+    return functools.reduce(math_.mul, values)
 
 
 def do_div(values: list[float]) -> float:
-    return functools.reduce(math.div, values)
+    return functools.reduce(math_.div, values)
