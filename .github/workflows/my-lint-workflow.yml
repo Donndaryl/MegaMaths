@@ -34,7 +34,7 @@ jobs:
       - name: execute cmd make code-quality
         run: |
           poetry install
-          poetry run black --check
+          poetry run black --check .
 
   dockerfile-analysis:
     runs-on: ubuntu-latest
