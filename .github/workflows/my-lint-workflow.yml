@@ -24,9 +24,13 @@ jobs:
   code-quality:
     runs-on: ubuntu-latest
     steps:
+      - name: Install poetry
+        run: |
+          pip install poetry
+      - name: Check out code
+        uses: actions/checkout@v2
       - name: Check of code
         uses: actions/checkout@v2
-
       - name: execute cmd make code-quality
         run: make code-quality
 
