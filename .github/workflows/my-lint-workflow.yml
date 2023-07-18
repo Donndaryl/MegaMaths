@@ -41,7 +41,6 @@ jobs:
           docker run --rm -i hadolint/hadolint < Dockerfile
 
   super-linter:
-    needs: [pull-request]
     runs-on: ubuntu-latest
     steps:
       - name: Check of code
