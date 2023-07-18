@@ -33,5 +33,7 @@ jobs:
           poetry install
       - name: Install dependencies
         run: |
+          pip install --upgrade pip
+          pip install --upgrade wheel
           pip install argparse
           pip install functools
