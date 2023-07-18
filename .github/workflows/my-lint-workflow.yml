@@ -32,7 +32,9 @@ jobs:
       - name: Check of code
         uses: actions/checkout@v2
       - name: execute cmd make code-quality
-        run: make code-quality
+        run: |
+          poetry install
+          poetry run black --check
 
   dockerfile-analysis:
     runs-on: ubuntu-latest
