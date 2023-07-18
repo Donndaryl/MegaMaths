@@ -24,7 +24,10 @@ jobs:
 
       - name: Check out code
         uses: actions/checkout@v2
-
+      - name: Check current directory
+        run: |
+          pwd
+          ls
       - name: Load Poetry dependencies
         run: |
           poetry install
