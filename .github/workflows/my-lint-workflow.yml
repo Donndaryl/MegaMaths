@@ -10,6 +10,8 @@ on:
   workflow_dispatch:
     branches:
       - master
+env:
+  GITHUB_TOKEN: ${{ secrets.my_token }}
 
 jobs:
   static-analysis:
