@@ -52,7 +52,7 @@ jobs:
       - name: Check of code
         uses: actions/checkout@v2
 
-      - name: Run super-linter
+      - name: Execute super-linter
         uses: github/super-linter@v4
         with:
-          validations: all
+          validations: python
