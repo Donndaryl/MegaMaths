@@ -10,14 +10,12 @@ on:
   workflow_dispatch:
     branches:
       - master
-env:
-  GITHUB_TOKEN: ${{ secrets.my_token }}
 
 jobs:
   static-analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Check of code
+      - name: Check out code
         uses: actions/checkout@v2
 
       - name: Execute semgrep
@@ -26,22 +24,17 @@ jobs:
   code-quality:
     runs-on: ubuntu-latest
     steps:
-      - name: Install poetry
-        run: |
-          pip install poetry
       - name: Check out code
         uses: actions/checkout@v2
-      - name: Check of code
-        uses: actions/checkout@v2
-      - name: execute cmd make code-quality
+
+      - name: Execute cmd make code-quality
         run: |
-          poetry install
-          poetry run black --check .
+          make code-quality
 
   dockerfile-analysis:
     runs-on: ubuntu-latest
     steps:
-      - name: Check of code
+      - name: Check out code
         uses: actions/checkout@v2
 
       - name: Execute hadolint
@@ -49,9 +42,10 @@ jobs:
           docker run --rm -i hadolint/hadolint < Dockerfile
 
   super-linter:
+    needs: [pull_request, static-analysis, code-quality, dockerfile-analysis]
     runs-on: ubuntu-latest
     steps:
-      - name: Check of code
+      - name: Check out code
         uses: actions/checkout@v2
 
       - name: Execute super-linter
