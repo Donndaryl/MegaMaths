@@ -55,4 +55,4 @@ jobs:
       - name: Execute super-linter
         uses: github/super-linter@v4
         with:
-          validations: python
+          languages: python
