@@ -34,7 +34,7 @@ WORKDIR /app
 COPY --from=builder /app/.venv ./.venv
 COPY --from=builder /app/dist ./dist
 
-RUN pip install ./dist/*.whl && \
+RUN pip install --no-cache-dir ./dist/*.whl && \
     rm -rf ./dist
 
 ENTRYPOINT [ "python", "-m", "mega_calculator" ]
