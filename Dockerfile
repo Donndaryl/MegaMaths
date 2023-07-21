@@ -8,7 +8,7 @@ ENV PATH="$POETRY_HOME/bin:$PATH"
 
 SHELL ["/bin/bash", "-o", "pipefail"]
 
-RUN apt-get update
+
 WORKDIR /app
 RUN apt-get install curl=latest
 WORKDIR /app
