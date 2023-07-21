@@ -81,4 +81,4 @@ jobs:
           DOCKER_IMAGE: "python:3.10-slim"
           TAG: "0.0.1"
         run: |
-          docker buildx build --push --tag "$DOCKER_IMAGE:$TAG" .
+          docker buildx build --push --tag $DOCKER_IMAGE:$TAG .
