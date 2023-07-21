@@ -9,7 +9,7 @@ ENV PATH="$POETRY_HOME/bin:$PATH"
 SHELL ["/bin/bash", "-o", "pipefail"]
 
 RUN apt-get update \
-    && apt-get install -y --no-install-recommends curl=lastest
+    && apt-get install -y --no-install-recommends curl=latest
 
 RUN curl -sSL https://install.python-poetry.org | python3 -
 
