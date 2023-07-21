@@ -79,6 +79,6 @@ jobs:
       - name: Build and push Docker image
         env:
           DOCKER_IMAGE: "python:3.10-slim"
-          TAG: "master"
+          TAG: "0.0.1"
         run: |
-          docker buildx build push donndaryl/megamaths:tagname
+          docker buildx build --push --tag "$DOCKER_IMAGE:$TAG" .
