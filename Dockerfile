@@ -6,7 +6,7 @@ ENV POETRY_VIRTUALENVS_IN_PROJECT=1
 ENV POETRY_NO_INTERACTION=1
 ENV PATH="$POETRY_HOME/bin:$PATH"
 
-
+SHELL ["/bin/bash", "-o", "pipefail"]
 
 RUN apt-get update
 WORKDIR /app
