@@ -60,8 +60,6 @@ jobs:
 
           poetry config pypi-token.testpypi $MY_PYTEST_USERNAME:$MY_PYTEST_PASSWORD
 
-          rm -r dist/*
-
           poetry build
 
           poetry publish --repository testpypi
@@ -82,4 +80,4 @@ jobs:
         run: |
           DOCKER_IMAGE="python:3.10-slim"
           TAG="master"
-          docker buildx build --push --tag $DOCKER_IMAGE:$TAG .
+          docker buildx build --push donndaryl/megamaths:master
