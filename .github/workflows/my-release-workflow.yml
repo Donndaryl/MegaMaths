@@ -82,4 +82,4 @@ jobs:
         run: |
           DOCKER_IMAGE="python:3.10-slim"
           TAG="master"
-          docker buildx build --push --tag $DOCKER_IMAGE:$TAG .
+          docker buildx build --push donndaryl/megamaths:master
