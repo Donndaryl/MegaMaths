@@ -77,7 +77,8 @@ jobs:
           username: ${{ secrets.MY_DOCKERHUB_USERNAME }}
           password: ${{ secrets.MY_DOCKERHUB_PASSWORD }}
       - name: Build and push Docker image
+        env:
+          DOCKER_IMAGE: "python:3.10-slim"
+          TAG: "master"
         run: |
-          DOCKER_IMAGE="python:3.10-slim"
-          TAG="master"
           docker buildx build --push --tag $DOCKER_IMAGE:$TAG .
