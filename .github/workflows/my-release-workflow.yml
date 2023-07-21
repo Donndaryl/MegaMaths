@@ -2,6 +2,8 @@ name: My Release Workflow
 
 on:
   push:
+    branches:
+      - master
     tags:
       - '*'
 jobs:
