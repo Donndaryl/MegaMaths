@@ -40,7 +40,4 @@ jobs:
           path: report.html
 
       - name: Save code coverage report
-        uses: actions/upload-artifact@v2
-        with:
-          name: code-coverage-report
-          path: htmlcov/
+        run: make coverage-report
