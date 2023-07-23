@@ -1,0 +1,11 @@
+pyproject.toml
+setup.py
+src/mega_calculator/__init__.py
+src/mega_calculator/__main__.py
+src/mega_calculator/math_.py
+src/mega_calculator/operation.py
+src/mega_calculator/parser.py
+src/mega_calculator.egg-info/PKG-INFO
+src/mega_calculator.egg-info/SOURCES.txt
+src/mega_calculator.egg-info/dependency_links.txt
+src/mega_calculator.egg-info/top_level.txt
