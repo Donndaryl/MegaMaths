@@ -36,6 +36,7 @@ jobs:
       - name: execute cmd make code-quality
         run: |
           poetry install
+          pip install black
           poetry run black --check .
 
   dockerfile-analysis:
