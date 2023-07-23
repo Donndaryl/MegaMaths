@@ -1,6 +1,6 @@
-from mega_calculator import __version__
+from src.mega_calculator import __version__
 
-from mega_calculator import math_
+from src.mega_calculator import math_
 
 
 def test_version():
