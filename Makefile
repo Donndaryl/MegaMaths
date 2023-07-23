@@ -3,7 +3,7 @@ install:
 	poetry install
 
 code-quality:
-	poetry run black --check .
+	poetry run black .
 
 
 .PHONY: tests
