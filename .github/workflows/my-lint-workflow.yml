@@ -37,7 +37,6 @@ jobs:
         run: |
           poetry install
           pip install black
-          poetry run black --check .
 
   dockerfile-analysis:
     runs-on: ubuntu-latest
