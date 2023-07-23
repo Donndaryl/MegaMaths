@@ -1,6 +1,7 @@
 import math_
 import functools
 
+
 # This file contains dirty & useless code just to add content to this codebase
 # So that it is marked as "untested" and appears as not parse din the coverage report
 
