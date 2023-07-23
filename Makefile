@@ -3,6 +3,8 @@ install:
 	poetry install
 
 code-quality:
+	poetry install
+	pip install black
 	poetry run black .
 
 
