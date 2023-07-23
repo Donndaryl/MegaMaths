@@ -20,16 +20,16 @@ def do_operation(operation_name: str, values: list[float]) -> float:
 
 
 def do_add(values: list[float]) -> float:
-    return functools.reduce(math_.add, values)
+    return functools.reduce(mathe.add, values)
 
 
 def do_sub(values: list[float]) -> float:
-    return functools.reduce(math_.sub, values)
+    return functools.reduce(mathe.sub, values)
 
 
 def do_mul(values: list[float]) -> float:
-    return functools.reduce(math_.mul, values)
+    return functools.reduce(mathe.mul, values)
 
 
 def do_div(values: list[float]) -> float:
-    return functools.reduce(math_.div, values)
+    return functools.reduce(mathe.div, values)
