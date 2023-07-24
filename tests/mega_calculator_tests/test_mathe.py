@@ -1,6 +1,6 @@
 from src.mega_calculator import __version__
 
-from src.mega_calculator import mathe
+from src.mega_calculator import math
 
 
 def test_version():
@@ -8,16 +8,16 @@ def test_version():
 
 
 def test_add():
-    assert 15 == mathe.add(10, 5)
+    assert 15 == math.add(10, 5)
 
 
 def test_sub():
-    assert 5 == mathe.sub(10, 5)
+    assert 5 == math.sub(10, 5)
 
 
 def test_mul():
-    assert 50 == mathe.mul(10, 5)
+    assert 50 == math.mul(10, 5)
 
 
 def test_div():
-    assert 2 == mathe.div(10, 5)
+    assert 2 == math.div(10, 5)
