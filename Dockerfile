@@ -1,5 +1,5 @@
 # Builder stage
-FROM python:3.10-slim AS builder
+FROM python:3.12-slim AS builder
 
 ENV POETRY_HOME="/opt/poetry"
 ENV POETRY_VIRTUALENVS_IN_PROJECT=1
@@ -24,7 +24,7 @@ RUN poetry install --no-root --no-ansi --without dev --no-cache-dir \
     && poetry build
 
 # Final stage
-FROM python:3.10-slim
+FROM python:3.12-slim
 
 ENV PYTHONDONTWRITEBYTECODE=1
 ENV PYTHONUNBUFFERED=1
